@@ -6,6 +6,8 @@ class Rectalnyj ()
     var x2: Double=0.0
     var y1: Double=0.0
     var y2: Double=0.0
+    var P: Double = 0.0
+    var S: Double = 0.0
 
     fun Rectalnyj(A : Double, B : Double )
     {
@@ -13,6 +15,7 @@ class Rectalnyj ()
         x2 = A
         y1 = 0.0
         y2 = B
+        CountPS()
     }
 
     fun Rectalnyj(x1: Double,x2: Double,y1: Double,y2: Double)
@@ -21,6 +24,12 @@ class Rectalnyj ()
         this.x2 = x2
         this.y1 = y1
         this.y2 = y2
+        CountPS()
+    }
+    private fun CountPS()
+    {
+        this.S = square()
+        this.P = perim()
     }
 
     fun square(): Double = Math.abs((x1 - x2)) * Math.abs((y1 - y2))
